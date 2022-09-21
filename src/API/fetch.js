@@ -11,6 +11,6 @@ export const FetchData =async (input)=>{
             APPID: KEY,
         }
     })
+    return data;
 }
 
-return data;

@@ -7,7 +7,13 @@ const App =()=>{
 
   const [input, setinput]= useState('');
 
-  const search
+  const search =async (e)=>{
+    if(e.key === 'Enter'){
+      const data = await FetchData(input)
+
+      console.log(data)
+    }
+  }
 
   return(
    <div className="main-container">
@@ -17,6 +23,7 @@ const App =()=>{
     placeholder="Enter a City Name"
     value={input}
     onChange={(e)=>setinput(e.target.value)}
+    onKeyPress={search}
     />
    </div>
   )
