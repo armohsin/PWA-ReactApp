@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
+import { FetchData } from "./API/fetch";
+import './App.css'
+
 
 const App =()=>{
+
+  const [input, setinput]= useState('');
+
+  const search
+
   return(
-    <center> <h1>Welcome</h1> </center>
+   <div className="main-container">
+    <input
+    type="text"
+    className="search"
+    placeholder="Enter a City Name"
+    value={input}
+    onChange={(e)=>setinput(e.target.value)}
+    />
+   </div>
   )
 }
 
